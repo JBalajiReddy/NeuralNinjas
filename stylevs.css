@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.voice_to_text {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#convert_text {
+    width: 80%;
+    height: 150px;
+    margin-top: 20px;
+}
+
+#click_to_convert {
+    font-size: 50px;
+    color: #007BFF; /* Change this to any color you like */
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice to Text Journal</title>
+    <link rel="stylesheet" type="text/css" href="stylevs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .voice_to_text {
+            max-width: 600px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .voice_to_text h1 {
+            font-size: 24px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        textarea#convert_text {
+            width: calc(100% - 40px);
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            resize: none;
+            font-size: 16px;
+            height: 200px;
+        }
+
+        #click_to_convert {
+            font-size: 36px;
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        #click_to_convert:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="voice_to_text"> 
+    <h1>Welcome to Your Voice-to-Text Journal</h1>
+    <textarea id="convert_text" placeholder="Speak or type your thoughts here..."></textarea>
+    <i id="click_to_convert" class="fas fa-microphone"></i>
+</div>
+
+<script type="text/javascript" src="scriptvs.js"></script>
+</body>
+</html>

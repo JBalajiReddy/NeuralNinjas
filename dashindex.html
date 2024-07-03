@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learninja Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1E3B49;
+      color: #ffffff;
+    }
+
+    .bg-white {
+      background-color: #EAE9EA;
+    }
+
+    .text-black {
+      color: #000000;
+    }
+
+    .hover\:bg-gray-200:hover {
+      background-color: #EDEA42;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .shadow-lg {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .box-frame {
+      background: #8aacb6;
+      border-radius: 82px;
+      box-shadow: -7px 7px 14px #7f9ea7, 7px -7px 14px #95bac5;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .box-frame:hover {
+      transform: translateY(-5px);
+    }
+
+    #calendar {
+      width: 100%;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .month {
+      padding: 20px 25px;
+      width: 100%;
+      background: #8AACB6;
+      text-align: center;
+    }
+
+    .month ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .month ul li {
+      color: white;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .month .prev, .month .next {
+      display: inline-block;
+      padding-top: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .weekdays {
+      margin: 0;
+      padding: 10px 0;
+      background-color: #ddd;
+    }
+
+    .weekdays li {
+      display: inline-block;
+      width: 13.6%;
+      color: #666;
+      text-align: center;
+    }
+
+    .days {
+      padding: 10px 0;
+      background: #eee;
+      margin: 0;
+    }
+
+    .days li {
+      list-style-type: none;
+      display: inline-block;
+      width: 13.6%;
+      text-align: center;
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: #777;
+    }
+
+    .days li .active {
+      padding: 5px;
+      background: #8AACB6;
+      color: white !important;
+    }
+  </style>
+</head>
+<body class="font-sans leading-normal tracking-normal">
+  <div class="flex md:flex-row flex-col h-screen">
+    <div class="bg-8AACB6 shadow-xl h-full w-full md:w-64 content-center p-4">
+      <div class="flex items-center justify-center space-x-2 mt-6">
+        <img class="w-10 h-10 rounded-full" src="https://picsum.photos/id/1/200/200" alt="Logo">
+        <span class="text-2xl font-semibold text-EAE9EA">Neural Ninjas</span>
+      </div>
+      <nav class="mt-10">
+        <a href="#" class="block py-2 px-4 rounded-lg hover:bg-EDEA42 transition-colors duration-300 text-EAE9EA">
+          <i class="material-icons text-gray-400 mr-2">dashboard</i>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="block py-2 px-4 rounded-lg hover:bg-EDEA42 transition-colors duration-300 text-EAE9EA">
+          <i class="material-icons text-gray-400 mr-2">assignment</i>
+          <span>Assignments</span>
+        </a>
+        <a href="#" class="block py-2 px-4 rounded-lg hover:bg-EDEA42 transition-colors duration-300 text-EAE9EA">
+          <i class="material-icons text-gray-400 mr-2">assessment</i>
+          <span>Reports</span>
+        </a>
+        <a href="#" class="block py-2 px-4 rounded-lg hover:bg-EDEA42 transition-colors duration-300 text-EAE9EA">
+          <i class="material-icons text-gray-400 mr-2">folder</i>
+          <span>File Storage</span>
+        </a>
+        <a href="#" class="block py-2 px-4 rounded-lg hover:bg-EDEA42 transition-colors duration-300 text-EAE9EA">
+          <i class="material-icons text-gray-400 mr-2">mail</i>
+          <span>Inbox</span>
+        </a>
+        <a href="#" class="block py-2 px-4 rounded-lg hover:bg-EDEA42 transition-colors duration-300 text-EAE9EA">
+          <i class="material-icons text-gray-400 mr-2">settings</i>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </div>
+    <div class="flex-1 p-6 flex justify-center items-center">
+      <div class="grid grid-cols-2 gap-8">
+        <a href="http://127.0.0.1:5500/indexviru.html" class="box-frame">
+          <h2 class="text-xl font-bold mb-2 text-EAE9EA">Viru</h2>
+        </a>
+        <a href="file:///D:/Chrome%20Downloads/ran29jun/index3.html" class="box-frame">
+          <h2 class="text-xl font-bold mb-2 text-EAE9EA">My Library</h2>
+        </a>
+        <a href="http://127.0.0.1:5500/index2.html" class="box-frame" id="rancho-link">
+          <h2 class="text-xl font-bold mb-2 text-EAE9EA">Rancho</h2>
+        </a>
+        <a href="http://127.0.0.1:5500/my-forest.html" class="box-frame">
+          <h2 class="text-xl font-bold mb-2 text-EAE9EA">My Forest</h2>
+        </a>
+      </div>
+    </div>
+    <div class="bg-8AACB6 shadow-xl h-full w-full md:w-64 p-6">
+      <div class="flex flex-col items-center justify-center space-y-4">
+        <img class="w-20 h-20 rounded-full" src="https://picsum.photos/id/1/200/200" alt="Profile Picture">
+        <h2 class="text-xl font-bold text-EAE9EA">Nihal</h2>
+        <p class="text-gray-400">5th grade</p>
+      </div>
+      <div class="mt-8">
+        <h2 class="text-xl font-bold mb-4 text-EAE9EA">Calendar</h2>
+        <div id="calendar">
+          <div class="month">
+            <ul>
+              <li class="prev">&#10094;</li>
+              <li class="next">&#10095;</li>
+              <li>June<br><span style="font-size:18px">2024</span></li>
+            </ul>
+          </div>
+
+          <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+          </ul>
+
+          <ul class="days">
+            <!-- Days will be dynamically generated here -->
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8">
+        <h2 class="text-xl font-bold mb-4 text-EAE9EA">To Do List</h2>
+        <ul class="space-y-2">
+          <li class="flex items-center">
+            <input type="checkbox" class="mr-2">
+            <span class="text-EAE9EA">Complete Math Worksheet - Due Tomorrow:</span>
+          </li>
+          <li class="flex items-center">
+            <input type="checkbox" class="mr-2">
+            <span class="text-EAE9EA">Read Chapter 5 in Science Textbook</span>
+          </li>
+          <li class="flex items-center">
+            <input type="checkbox" class="mr-2">
+            <span class="text-EAE9EA">Practice Spelling Words for Test on Friday</span>
+          </li>
+
+        </ul
